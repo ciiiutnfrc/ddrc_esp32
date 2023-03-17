@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name Espressif)(type Legacy)(uri ${KIPRJMOD}/../kicad_lib/libraries/Espressif.lib)(options "")(descr ""))
+  (lib (name BAT760-7)(type Legacy)(uri ${KIPRJMOD}/../kicad_lib/libraries/BAT760-7.lib)(options "")(descr ""))
+  (lib (name SS34)(type Legacy)(uri ${KIPRJMOD}/../kicad_lib/libraries/SS34.lib)(options "")(descr ""))
+  (lib (name MMS8050-H-TP)(type Legacy)(uri ${KIPRJMOD}/../kicad_lib/libraries/MMS8050-H-TP.lib)(options "")(descr ""))
+)

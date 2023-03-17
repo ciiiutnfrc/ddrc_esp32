@@ -1,0 +1,798 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title "Controlador embebido para robot de tracción diferencial"
+Date "2022-03-12"
+Rev "0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Espressif:ESP32-WROOM-32E U6
+U 1 1 6219D915
+P 3700 2925
+F 0 "U6" H 3725 4740 50  0000 C CNN
+F 1 "ESP32-WROOM-32E" H 3725 4649 50  0000 C CNN
+F 2 "Espressif:ESP32-WROOM-32E-with-keep-area" H 3700 1175 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf" H 4100 2925 50  0001 C CNN
+	1    3700 2925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 621A5F0A
+P 5450 4525
+F 0 "#PWR06" H 5450 4275 50  0001 C CNN
+F 1 "GND" H 5455 4352 50  0000 C CNN
+F 2 "" H 5450 4525 50  0001 C CNN
+F 3 "" H 5450 4525 50  0001 C CNN
+	1    5450 4525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4225 5100 4225
+Wire Wire Line
+	5100 4325 5450 4325
+Connection ~ 5450 4325
+Wire Wire Line
+	5450 4325 5450 4225
+Wire Wire Line
+	5100 4425 5450 4425
+Wire Wire Line
+	5450 4425 5450 4325
+Text GLabel 1225 4325 0    50   Input ~ 0
+3V3
+Text GLabel 1950 2175 0    50   UnSpc ~ 0
+RXD0
+Text GLabel 1950 2275 0    50   UnSpc ~ 0
+TXD0
+Wire Wire Line
+	2350 2275 1950 2275
+Wire Wire Line
+	2350 2175 1950 2175
+$Comp
+L Device:C C12
+U 1 1 6221C45B
+P 1500 4525
+F 0 "C12" H 1615 4571 50  0000 L CNN
+F 1 "22uF" H 1615 4480 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1538 4375 50  0001 C CNN
+F 3 "~" H 1500 4525 50  0001 C CNN
+	1    1500 4525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C21
+U 1 1 6221CC42
+P 2000 4525
+F 0 "C21" H 2115 4571 50  0000 L CNN
+F 1 "100nF" H 2115 4480 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2038 4375 50  0001 C CNN
+F 3 "~" H 2000 4525 50  0001 C CNN
+	1    2000 4525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 4325 1500 4325
+Wire Wire Line
+	1500 4375 1500 4325
+Connection ~ 1500 4325
+Wire Wire Line
+	1500 4325 2000 4325
+Wire Wire Line
+	2000 4375 2000 4325
+Connection ~ 2000 4325
+Wire Wire Line
+	2000 4325 2350 4325
+$Comp
+L power:GND #PWR01
+U 1 1 6221D916
+P 1500 4675
+F 0 "#PWR01" H 1500 4425 50  0001 C CNN
+F 1 "GND" H 1505 4502 50  0000 C CNN
+F 2 "" H 1500 4675 50  0001 C CNN
+F 3 "" H 1500 4675 50  0001 C CNN
+	1    1500 4675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 6221E518
+P 2000 4675
+F 0 "#PWR03" H 2000 4425 50  0001 C CNN
+F 1 "GND" H 2005 4502 50  0000 C CNN
+F 2 "" H 2000 4675 50  0001 C CNN
+F 3 "" H 2000 4675 50  0001 C CNN
+	1    2000 4675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4525 5450 4425
+Connection ~ 5450 4425
+$Comp
+L Device:C C1
+U 1 1 62237567
+P 9275 1750
+F 0 "C1" H 9390 1796 50  0000 L CNN
+F 1 "100nF" H 9390 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 9313 1600 50  0001 C CNN
+F 3 "~" H 9275 1750 50  0001 C CNN
+	1    9275 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 6223793E
+P 9275 1350
+F 0 "R5" H 9345 1396 50  0000 L CNN
+F 1 "10k" H 9345 1305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9205 1350 50  0001 C CNN
+F 3 "~" H 9275 1350 50  0001 C CNN
+	1    9275 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 62237BB3
+P 9275 1900
+F 0 "#PWR09" H 9275 1650 50  0001 C CNN
+F 1 "GND" H 9280 1727 50  0000 C CNN
+F 2 "" H 9275 1900 50  0001 C CNN
+F 3 "" H 9275 1900 50  0001 C CNN
+	1    9275 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 9275 1125 1    50   Input ~ 0
+3V3
+Text GLabel 1950 1925 0    50   Input ~ 0
+EN
+$Comp
+L Switch:SW_Push SW2
+U 1 1 622417AD
+P 8625 1550
+F 0 "SW2" H 8625 1835 50  0000 C CNN
+F 1 "SW_Push" H 8625 1744 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 8625 1750 50  0001 C CNN
+F 3 "~" H 8625 1750 50  0001 C CNN
+	1    8625 1550
+	1    0    0    -1  
+$EndComp
+Text GLabel 1950 2375 0    50   Input ~ 0
+BOOT
+Wire Wire Line
+	2350 1925 1950 1925
+Wire Wire Line
+	1950 2375 2350 2375
+Wire Wire Line
+	9275 1125 9275 1200
+Wire Wire Line
+	9275 1500 9275 1550
+Wire Wire Line
+	9600 1550 9275 1550
+Connection ~ 9275 1550
+Wire Wire Line
+	9275 1550 9275 1600
+$Comp
+L Device:R R4
+U 1 1 62255B5A
+P 9025 3150
+F 0 "R4" H 9095 3196 50  0000 L CNN
+F 1 "10k" H 9095 3105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8955 3150 50  0001 C CNN
+F 3 "~" H 9025 3150 50  0001 C CNN
+	1    9025 3150
+	1    0    0    -1  
+$EndComp
+Text GLabel 9025 2925 1    50   Input ~ 0
+3V3
+Wire Wire Line
+	9025 2925 9025 3000
+$Comp
+L Device:C C3
+U 1 1 62259327
+P 8625 1875
+F 0 "C3" V 8373 1875 50  0000 C CNN
+F 1 "100nF" V 8464 1875 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 8663 1725 50  0001 C CNN
+F 3 "~" H 8625 1875 50  0001 C CNN
+	1    8625 1875
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 62259B7A
+P 8250 1950
+F 0 "#PWR07" H 8250 1700 50  0001 C CNN
+F 1 "GND" H 8255 1777 50  0000 C CNN
+F 2 "" H 8250 1950 50  0001 C CNN
+F 3 "" H 8250 1950 50  0001 C CNN
+	1    8250 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8825 1550 8900 1550
+Wire Wire Line
+	8425 1550 8250 1550
+Wire Wire Line
+	8250 1550 8250 1875
+Wire Wire Line
+	8475 1875 8250 1875
+Connection ~ 8250 1875
+Wire Wire Line
+	8250 1875 8250 1950
+Wire Wire Line
+	8775 1875 8900 1875
+Wire Wire Line
+	8900 1875 8900 1550
+Connection ~ 8900 1550
+Text GLabel 9600 1550 2    50   Output ~ 0
+EN
+$Comp
+L Switch:SW_Push SW1
+U 1 1 6225E2E6
+P 8625 3350
+F 0 "SW1" H 8625 3635 50  0000 C CNN
+F 1 "SW_Push" H 8625 3544 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 8625 3550 50  0001 C CNN
+F 3 "~" H 8625 3550 50  0001 C CNN
+	1    8625 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 6225E2EC
+P 8625 3675
+F 0 "C2" V 8373 3675 50  0000 C CNN
+F 1 "100nF" V 8464 3675 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 8663 3525 50  0001 C CNN
+F 3 "~" H 8625 3675 50  0001 C CNN
+	1    8625 3675
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 6225E2F2
+P 8250 3750
+F 0 "#PWR08" H 8250 3500 50  0001 C CNN
+F 1 "GND" H 8255 3577 50  0000 C CNN
+F 2 "" H 8250 3750 50  0001 C CNN
+F 3 "" H 8250 3750 50  0001 C CNN
+	1    8250 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8825 3350 9025 3350
+Wire Wire Line
+	8425 3350 8250 3350
+Wire Wire Line
+	8250 3350 8250 3675
+Wire Wire Line
+	8475 3675 8250 3675
+Connection ~ 8250 3675
+Wire Wire Line
+	8250 3675 8250 3750
+Wire Wire Line
+	8775 3675 9025 3675
+Wire Wire Line
+	9025 3675 9025 3350
+Wire Wire Line
+	9375 3350 9025 3350
+Text GLabel 9375 3350 2    50   Output ~ 0
+BOOT
+$Comp
+L Device:R R37
+U 1 1 622674CB
+P 8650 4975
+F 0 "R37" V 8443 4975 50  0000 C CNN
+F 1 "270" V 8534 4975 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8580 4975 50  0001 C CNN
+F 3 "~" H 8650 4975 50  0001 C CNN
+	1    8650 4975
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 62267AEB
+P 9125 4975
+F 0 "D8" H 9118 4720 50  0000 C CNN
+F 1 "LED" H 9118 4811 50  0000 C CNN
+F 2 "LED_SMD:LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 9125 4975 50  0001 C CNN
+F 3 "~" H 9125 4975 50  0001 C CNN
+	1    9125 4975
+	-1   0    0    1   
+$EndComp
+Text GLabel 8250 4775 1    50   Input ~ 0
+3V3
+Text GLabel 9475 4975 2    50   Input ~ 0
+LED1
+Wire Wire Line
+	8500 4975 8250 4975
+Wire Wire Line
+	8250 4975 8250 4775
+Wire Wire Line
+	8800 4975 8975 4975
+Wire Wire Line
+	9275 4975 9475 4975
+$Comp
+L Device:R R36
+U 1 1 6226C20E
+P 8650 5375
+F 0 "R36" V 8443 5375 50  0000 C CNN
+F 1 "270" V 8534 5375 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8580 5375 50  0001 C CNN
+F 3 "~" H 8650 5375 50  0001 C CNN
+	1    8650 5375
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D7
+U 1 1 6226C214
+P 9125 5375
+F 0 "D7" H 9118 5120 50  0000 C CNN
+F 1 "LED" H 9118 5211 50  0000 C CNN
+F 2 "LED_SMD:LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 9125 5375 50  0001 C CNN
+F 3 "~" H 9125 5375 50  0001 C CNN
+	1    9125 5375
+	-1   0    0    1   
+$EndComp
+Text GLabel 9475 5375 2    50   Input ~ 0
+LED2
+Wire Wire Line
+	8500 5375 8250 5375
+Wire Wire Line
+	8800 5375 8975 5375
+Wire Wire Line
+	9275 5375 9475 5375
+$Comp
+L Device:R R35
+U 1 1 6226D0C1
+P 8650 5775
+F 0 "R35" V 8443 5775 50  0000 C CNN
+F 1 "270" V 8534 5775 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8580 5775 50  0001 C CNN
+F 3 "~" H 8650 5775 50  0001 C CNN
+	1    8650 5775
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 6226D0C7
+P 9125 5775
+F 0 "D6" H 9118 5520 50  0000 C CNN
+F 1 "LED" H 9118 5611 50  0000 C CNN
+F 2 "LED_SMD:LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 9125 5775 50  0001 C CNN
+F 3 "~" H 9125 5775 50  0001 C CNN
+	1    9125 5775
+	-1   0    0    1   
+$EndComp
+Text GLabel 9475 5775 2    50   Input ~ 0
+LED3
+Wire Wire Line
+	8500 5775 8250 5775
+Wire Wire Line
+	8800 5775 8975 5775
+Wire Wire Line
+	9275 5775 9475 5775
+$Comp
+L Device:R R34
+U 1 1 6226E295
+P 8650 6225
+F 0 "R34" V 8443 6225 50  0000 C CNN
+F 1 "270" V 8534 6225 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8580 6225 50  0001 C CNN
+F 3 "~" H 8650 6225 50  0001 C CNN
+	1    8650 6225
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 6226E29B
+P 9125 6225
+F 0 "D5" H 9118 5970 50  0000 C CNN
+F 1 "LED" H 9118 6061 50  0000 C CNN
+F 2 "LED_SMD:LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 9125 6225 50  0001 C CNN
+F 3 "~" H 9125 6225 50  0001 C CNN
+	1    9125 6225
+	-1   0    0    1   
+$EndComp
+Text GLabel 9475 6225 2    50   Input ~ 0
+LED4
+Wire Wire Line
+	8500 6225 8250 6225
+Wire Wire Line
+	8800 6225 8975 6225
+Wire Wire Line
+	9275 6225 9475 6225
+Wire Wire Line
+	8250 6225 8250 5775
+Connection ~ 8250 4975
+Connection ~ 8250 5375
+Wire Wire Line
+	8250 5375 8250 4975
+Connection ~ 8250 5775
+Wire Wire Line
+	8250 5775 8250 5375
+Text GLabel 2025 3975 0    50   UnSpc ~ 0
+JTAG_TDO
+Text GLabel 2025 3875 0    50   UnSpc ~ 0
+JTAG_TCK
+Text GLabel 2025 3775 0    50   UnSpc ~ 0
+JTAG_TDI
+Text GLabel 2025 3675 0    50   UnSpc ~ 0
+JTAG_TMS
+Wire Wire Line
+	2350 3675 2025 3675
+Wire Wire Line
+	2025 3775 2350 3775
+Wire Wire Line
+	2025 3875 2350 3875
+Wire Wire Line
+	2025 3975 2350 3975
+Text Notes 9800 800  2    118  ~ 0
+PULSADOR RESET
+Text Notes 10050 2600 2    118  ~ 0
+PULSADOR BOOTLOADER
+Text GLabel 1925 3375 0    50   Output ~ 0
+LED1
+Text GLabel 5375 2925 2    50   Output ~ 0
+LED2
+Text GLabel 5375 3025 2    50   Output ~ 0
+LED3
+Text GLabel 5375 3125 2    50   Output ~ 0
+LED4
+Wire Wire Line
+	5375 2925 5100 2925
+Wire Wire Line
+	5100 3025 5375 3025
+Wire Wire Line
+	5375 3125 5100 3125
+Wire Wire Line
+	1925 3375 2350 3375
+Text GLabel 5375 2325 2    50   Input ~ 0
+ENC_DER_A
+Text GLabel 5375 2225 2    50   Input ~ 0
+ENC_DER_B
+Text GLabel 5375 2425 2    50   Input ~ 0
+ENC_IZQ_A
+Text GLabel 5375 2125 2    50   Input ~ 0
+ENC_IZQ_B
+Wire Wire Line
+	5375 2225 5100 2225
+Wire Wire Line
+	5100 2325 5375 2325
+Wire Wire Line
+	5375 2125 5100 2125
+Wire Wire Line
+	5100 2425 5375 2425
+Text GLabel 5375 2725 2    50   Output ~ 0
+PWM_IZQ
+Text GLabel 5375 2825 2    50   Output ~ 0
+EN_MOT_IZQ
+Text GLabel 5375 2625 2    50   Output ~ 0
+EN_MOT_DER
+Text GLabel 5375 2525 2    50   Output ~ 0
+PWM_DER
+Wire Wire Line
+	5100 2525 5375 2525
+Wire Wire Line
+	5375 2625 5100 2625
+Wire Wire Line
+	5100 2725 5375 2725
+Wire Wire Line
+	5375 2825 5100 2825
+Text GLabel 1950 2575 0    50   Input ~ 0
+MED_BAT1
+Text GLabel 1950 2675 0    50   Input ~ 0
+MED_BAT2
+Wire Wire Line
+	1950 2575 2350 2575
+Wire Wire Line
+	1950 2675 2350 2675
+Text GLabel 5375 1925 2    50   Output ~ 0
+LED_EXT1
+Text GLabel 5375 2025 2    50   Output ~ 0
+LED_EXT2
+Wire Wire Line
+	5100 1925 5375 1925
+Wire Wire Line
+	5100 2025 5375 2025
+$Comp
+L Switch:SW_Push SW5
+U 1 1 622D3BCC
+P 2200 6750
+F 0 "SW5" H 2200 7035 50  0000 C CNN
+F 1 "SW_Push" H 2200 6944 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 2200 6950 50  0001 C CNN
+F 3 "~" H 2200 6950 50  0001 C CNN
+	1    2200 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R41
+U 1 1 622D3BD2
+P 2475 6325
+F 0 "R41" H 2545 6371 50  0000 L CNN
+F 1 "10k" H 2545 6280 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2405 6325 50  0001 C CNN
+F 3 "~" H 2475 6325 50  0001 C CNN
+	1    2475 6325
+	1    0    0    -1  
+$EndComp
+Text GLabel 2475 6100 1    50   Input ~ 0
+3V3
+Wire Wire Line
+	2475 6100 2475 6175
+Wire Wire Line
+	2475 6475 2475 6750
+$Comp
+L Device:C C20
+U 1 1 622D3BDD
+P 2200 7075
+F 0 "C20" V 1948 7075 50  0000 C CNN
+F 1 "100nF" V 2039 7075 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2238 6925 50  0001 C CNN
+F 3 "~" H 2200 7075 50  0001 C CNN
+	1    2200 7075
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 622D3BE3
+P 1825 7150
+F 0 "#PWR02" H 1825 6900 50  0001 C CNN
+F 1 "GND" H 1830 6977 50  0000 C CNN
+F 2 "" H 1825 7150 50  0001 C CNN
+F 3 "" H 1825 7150 50  0001 C CNN
+	1    1825 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 6750 2475 6750
+Wire Wire Line
+	2000 6750 1825 6750
+Wire Wire Line
+	1825 6750 1825 7075
+Wire Wire Line
+	2050 7075 1825 7075
+Connection ~ 1825 7075
+Wire Wire Line
+	1825 7075 1825 7150
+Wire Wire Line
+	2350 7075 2475 7075
+Wire Wire Line
+	2475 7075 2475 6750
+Connection ~ 2475 6750
+$Comp
+L Switch:SW_Push SW4
+U 1 1 622F17B2
+P 3575 6750
+F 0 "SW4" H 3575 7035 50  0000 C CNN
+F 1 "SW_Push" H 3575 6944 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 3575 6950 50  0001 C CNN
+F 3 "~" H 3575 6950 50  0001 C CNN
+	1    3575 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R40
+U 1 1 622F17B8
+P 3850 6325
+F 0 "R40" H 3920 6371 50  0000 L CNN
+F 1 "10k" H 3920 6280 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3780 6325 50  0001 C CNN
+F 3 "~" H 3850 6325 50  0001 C CNN
+	1    3850 6325
+	1    0    0    -1  
+$EndComp
+Text GLabel 3850 6100 1    50   Input ~ 0
+3V3
+Wire Wire Line
+	3850 6100 3850 6175
+Wire Wire Line
+	3850 6475 3850 6750
+$Comp
+L Device:C C17
+U 1 1 622F17C1
+P 3575 7075
+F 0 "C17" V 3323 7075 50  0000 C CNN
+F 1 "100nF" V 3414 7075 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3613 6925 50  0001 C CNN
+F 3 "~" H 3575 7075 50  0001 C CNN
+	1    3575 7075
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 622F17C7
+P 3200 7150
+F 0 "#PWR04" H 3200 6900 50  0001 C CNN
+F 1 "GND" H 3205 6977 50  0000 C CNN
+F 2 "" H 3200 7150 50  0001 C CNN
+F 3 "" H 3200 7150 50  0001 C CNN
+	1    3200 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3775 6750 3850 6750
+Wire Wire Line
+	3375 6750 3200 6750
+Wire Wire Line
+	3200 6750 3200 7075
+Wire Wire Line
+	3425 7075 3200 7075
+Connection ~ 3200 7075
+Wire Wire Line
+	3200 7075 3200 7150
+Wire Wire Line
+	3725 7075 3850 7075
+Wire Wire Line
+	3850 7075 3850 6750
+Connection ~ 3850 6750
+Text GLabel 4100 6750 2    50   Output ~ 0
+PUL2
+$Comp
+L Switch:SW_Push SW3
+U 1 1 622F622E
+P 4950 6750
+F 0 "SW3" H 4950 7035 50  0000 C CNN
+F 1 "SW_Push" H 4950 6944 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 4950 6950 50  0001 C CNN
+F 3 "~" H 4950 6950 50  0001 C CNN
+	1    4950 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R29
+U 1 1 622F6234
+P 5225 6325
+F 0 "R29" H 5295 6371 50  0000 L CNN
+F 1 "10k" H 5295 6280 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5155 6325 50  0001 C CNN
+F 3 "~" H 5225 6325 50  0001 C CNN
+	1    5225 6325
+	1    0    0    -1  
+$EndComp
+Text GLabel 5225 6100 1    50   Input ~ 0
+3V3
+Wire Wire Line
+	5225 6100 5225 6175
+Wire Wire Line
+	5225 6475 5225 6750
+$Comp
+L Device:C C11
+U 1 1 622F623D
+P 4950 7075
+F 0 "C11" V 4698 7075 50  0000 C CNN
+F 1 "100nF" V 4789 7075 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4988 6925 50  0001 C CNN
+F 3 "~" H 4950 7075 50  0001 C CNN
+	1    4950 7075
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 622F6243
+P 4575 7150
+F 0 "#PWR05" H 4575 6900 50  0001 C CNN
+F 1 "GND" H 4580 6977 50  0000 C CNN
+F 2 "" H 4575 7150 50  0001 C CNN
+F 3 "" H 4575 7150 50  0001 C CNN
+	1    4575 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 6750 5225 6750
+Wire Wire Line
+	4750 6750 4575 6750
+Wire Wire Line
+	4575 6750 4575 7075
+Wire Wire Line
+	4800 7075 4575 7075
+Connection ~ 4575 7075
+Wire Wire Line
+	4575 7075 4575 7150
+Wire Wire Line
+	5100 7075 5225 7075
+Wire Wire Line
+	5225 7075 5225 6750
+Connection ~ 5225 6750
+Text GLabel 5475 6750 2    50   Output ~ 0
+PUL3
+Text GLabel 1950 2775 0    50   Input ~ 0
+PUL1
+Text GLabel 1950 2875 0    50   Input ~ 0
+PUL2
+Text GLabel 1950 3175 0    50   Input ~ 0
+PUL3
+Wire Wire Line
+	1950 2775 2350 2775
+Wire Wire Line
+	1950 2875 2350 2875
+Wire Wire Line
+	1950 3175 2350 3175
+Text GLabel 2725 6750 2    50   Output ~ 0
+PUL1
+Wire Wire Line
+	2725 6750 2475 6750
+Wire Wire Line
+	4100 6750 3850 6750
+Wire Wire Line
+	5475 6750 5225 6750
+Wire Wire Line
+	9025 3350 9025 3300
+Connection ~ 9025 3350
+Wire Wire Line
+	8900 1550 9275 1550
+Wire Notes Line width 12
+	600  600  6900 600 
+Wire Notes Line width 12
+	6900 600  6900 5200
+Wire Notes Line width 12
+	6900 5200 600  5200
+Wire Notes Line width 12
+	600  5200 600  600 
+Wire Notes Line width 12
+	600  5300 6900 5300
+Wire Notes Line width 12
+	6900 5300 6900 7700
+Wire Notes Line width 12
+	6900 7700 600  7700
+Wire Notes Line width 12
+	600  7700 600  5300
+Wire Notes Line width 12
+	7000 600  11100 600 
+Wire Notes Line width 12
+	7000 2400 11100 2400
+Wire Notes Line width 12
+	11100 4100 7000 4100
+Wire Notes Line width 12
+	7000 850  11100 850 
+Wire Notes Line width 12
+	7000 2650 11100 2650
+Wire Notes Line width 12
+	11100 2300 7000 2300
+Wire Notes Line width 12
+	11100 600  11100 2300
+Wire Notes Line width 12
+	7000 600  7000 2300
+Wire Notes Line width 12
+	7000 2400 7000 4100
+Wire Notes Line width 12
+	11100 2400 11100 4100
+Wire Notes Line width 12
+	7000 4200 11100 4200
+Wire Notes Line width 12
+	11100 4200 11100 6400
+Wire Notes Line width 12
+	11100 6400 7000 6400
+Wire Notes Line width 12
+	7000 6400 7000 4200
+Text Notes 7800 4400 0    118  ~ 0
+LEDS PROPOSITOS GENERALES
+Text Notes 2200 5500 0    118  ~ 0
+PULSADORES PROPOSITOS GENERALES
+Wire Notes Line width 12
+	6900 5550 600  5550
+Wire Notes Line width 12
+	7000 4450 11100 4450
+Wire Notes Line width 12
+	6900 850  600  850 
+Text Notes 2400 800  0    118  ~ 0
+MODULO ESP32-WROOM-32E
+Wire Notes Line rgb(255, 0, 0)
+	9075 1625 9675 1625
+Wire Notes Line rgb(255, 0, 0)
+	9675 1625 9675 2150
+Wire Notes Line rgb(255, 0, 0)
+	9675 2150 9050 2150
+Wire Notes Line rgb(255, 0, 0)
+	9050 2150 9050 1625
+Text Notes 8925 2225 0    50   ~ 0
+Verificar constante RC (prototipo)
+$EndSCHEMATC
