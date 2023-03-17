@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SS34
+D ON Semi SS34 SMT Schottky Diode, 40V 3A, 2-Pin DO-214AB
+K
+F https://componentsearchengine.com/Datasheets/2/SS34.pdf
+$ENDCMP
+#
+#End Doc Library

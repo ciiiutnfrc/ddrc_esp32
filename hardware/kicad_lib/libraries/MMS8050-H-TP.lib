@@ -1,0 +1,33 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model MMS8050-H-TP
+#/999056/771300/2.49/3/3/Transistor BJT NPN
+DEF MMS8050-H-TP Q 0 30 Y Y 1 F N
+F0 "Q" 550 50 50 H V L CNN
+F1 "MMS8050-H-TP" 550 -50 50 H V L CNN
+F2 "SOT96P237X122-3N" 550 -150 50 H I L CNN
+F3 "https://mouser.componentsearchengine.com/Datasheets/1/MMS8050-H-TP.pdf" 550 -250 50 H I L CNN
+F4 "Bipolar Transistors - BJT NPN SILICON PLASTIC-ENCAPSULATE TRANSISTOR" 550 -350 50 H I L CNN "Description"
+F5 "1.22" 550 -450 50 H I L CNN "Height"
+F6 "Micro Commercial Components (MCC)" 550 -550 50 H I L CNN "Manufacturer_Name"
+F7 "MMS8050-H-TP" 550 -650 50 H I L CNN "Manufacturer_Part_Number"
+F8 "833-MMS8050-H-TP" 550 -750 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Micro-Commercial-Components-MCC/MMS8050-H-TP?qs=y6ZabgHbY%252Bwohxnqwm2Wtw%3D%3D" 550 -850 50 H I L CNN "Mouser Price/Stock"
+F10 "MMS8050-H-TP" 550 -950 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/mms8050-h-tp/micro-commercial-components?region=europe" 550 -1050 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 100 R 50 50 0 0 P
+X ~ 2 400 -300 100 U 50 50 0 0 P
+X ~ 3 400 300 100 D 50 50 0 0 P
+P 2 0 1 20 300 100 300 -100 N
+P 2 0 1 6 300 50 400 150 N
+P 2 0 1 6 300 -50 400 -150 N
+P 2 0 1 6 400 -150 400 -200 N
+P 2 0 1 6 400 150 400 200 N
+P 2 0 1 6 100 0 300 0 N
+C 350 0 158 0 1 10 N
+P 4 0 1 10 330 -100 350 -80 370 -120 330 -100 F
+ENDDRAW
+ENDDEF
+#
+#End Library
