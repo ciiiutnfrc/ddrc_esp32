@@ -14,10 +14,14 @@ Las funciones principales del controlador diferencial son:
 1. Comunicarse con la PC a bordo del robot.
 
 La siguiente imagen muestra un render del PCB del controlador diferencial.
-<center>
+<p align="center">
   <img src="doc/ddrc_esp32_pcb_render.png" alt="DDRC-ESP32render" width="500"/>
-</center>
+</p>
 
 ## Videos
 
 * [Proyecto Final: Controlador para robot de tracción diferencial compatible con ROS 2](https://www.youtube.com/watch?v=9FsznQ60jsQ&ab_channel=CIIIUTN-FRC)
+
+## Documentación adicional
+
+* [Ejemplo `blink` con ESP-IDF y Docker](doc/IDFBlinkDocker.md)
