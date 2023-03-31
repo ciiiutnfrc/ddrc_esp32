@@ -33,7 +33,7 @@ espressif/idf                 latest             c82768a177c2   14 hours ago    
 
 El contenedor se puede ejecutar con el siguiente comando:
 ```
-> docker run --rm -v $PWD:/project -w /project -it espressif/idf
+> docker run --rm -v $PWD:/home/esp-idf -w /home/esp-idf -it espressif/idf
 ```
 
 El ESP-IDF incluye la herramienta de línea de comandos [`idf.py`](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/tools/idf-py.html) que sirve de front-end para administrar y construir los proyectos de forma simple. 

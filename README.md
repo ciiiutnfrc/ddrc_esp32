@@ -4,7 +4,10 @@ DDRC-ESP32 (Differential Driver Robot Controller con ESP32) es una placa de cont
 El controlador diferencial está basado en el módulo [ESP32-WROOM-32E](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf) de la marca [Espressif](https://www.espressif.com/), el cual cuenta con un SoC (System On Chip) modelo [ESP32-D0WD-V3](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf).
 La elección de este módulo se debe principalmente a que está soportado por [micro-ROS](https://micro.ros.org/docs/overview/hardware/). 
 
-El controlador diferencial sirve de base para el desarrollo de robots de tracción diferencial cuyos algoritmos de navegación y control estén basados en [ROS 2](http://docs.ros.org/).
+El desarrollo del controlador diferencial se llevó a cabo como Proyecto Final de la carrera de Ingeniería Electrónica en la [Facultad Regional Córdoba](https://www.frc.utn.edu.ar/) de la Universidad Tecnológica Nacional.
+El título del proyecto es _"Controlador Embebido para Robot de Tracción Differencial"_ y fue desarrollado por Gustavo Albarrán, Dante Ruiz y Juan Nicolodi bajo la dirección del Ing. Gonzalo Perez-Paina y del Ing. Diego Gonzalez Dondo.
+
+Este controlador tiene por finalidad servir de base al desarrollo de robots de tracción diferencial cuyos algoritmos de navegación y control estén basados en [ROS 2](http://docs.ros.org/).
 
 Las funciones principales del controlador diferencial son:
 1. Leer la información de los codificadores ópticos acoplados a las ruedas de tracción.
