@@ -29,3 +29,4 @@ La siguiente imagen muestra un render del PCB del controlador diferencial.
 
 * [Ejemplo `blink` con ESP-IDF y Docker](doc/IDFBlinkDocker.md)
 * [Nodo micro-ROS de ejemplo en ESP32 con Docker](doc/ESP32MicroROS.md).
+* [Servidor HTTP para evaluación sobre un robot móvil](doc/HTTPServerDDR.md).
