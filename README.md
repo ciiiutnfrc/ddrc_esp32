@@ -30,3 +30,7 @@ La siguiente imagen muestra un render del PCB del controlador diferencial.
 * [Ejemplo `blink` con ESP-IDF y Docker](doc/IDFBlinkDocker.md)
 * [Nodo micro-ROS de ejemplo en ESP32 con Docker](doc/ESP32MicroROS.md).
 * [Servidor HTTP para evaluación sobre un robot móvil](doc/HTTPServerDDR.md).
+
+## Licencia
+  <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/ciiiutnfrc/ddrc_esp32">DDRC-ESP32: Controlador para robot de tracción diferencial basado en ESP32</a> by <span property="cc:attributionName">Gustavo Albarran, Dante Ruiz, Juan Nicolodi, Diego Gonzalez Dondo, Gonzalo Perez Paina</span> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+ 
